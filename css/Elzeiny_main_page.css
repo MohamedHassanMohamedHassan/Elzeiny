@@ -262,7 +262,7 @@ font-size: 18px;
   border-radius: 8px;
   background:none;
   z-index: 2;
-  /* visibility: hidden; */
+  visibility: hidden;
   transition: visibility .5s,opacity .5s linear;
   transition: all .5s linear;
   opacity: 0;
