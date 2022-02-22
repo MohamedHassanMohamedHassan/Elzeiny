@@ -1,0 +1,973 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  max-height: none;
+  position: absolute;
+}
+
+ul,li,a{
+  list-style: none;
+  text-decoration: none;
+}
+
+.navigation{
+  margin: 0;
+  padding-top: 1px;
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+#imoID img{
+  width: 5%;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 101%;
+  border-radius: 13px;
+}
+
+#AboutID{
+  margin-right: 12%;
+}
+
+@keyframes zoom {
+  0%   {position: relative; left:0px; top:0px;}
+  50%  {position: relative; left:200px; top:0px;}
+  100% {position: relative; left:200px; top:0px;}
+}
+
+#HeaderForm{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#HeaderForm .CloseForm{
+  position: absolute;
+  float: left;
+  left: 1%;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
+#HeaderForm .CloseForm:hover{
+  font-size: 20px;
+}
+
+.BookingForm{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 6%;
+  height: 25%;
+  /* background-color: #e91e63; */
+  background-color: gray;
+  border-radius: 10px;
+  z-index: 2;
+  visibility: hidden;
+  transition: visibility .5s,opacity .5s linear;
+  transition: all .5s linear;
+  opacity: 0;
+}
+
+.BookingFormDiv{
+  width: 100%;
+  height: 100%;
+}
+
+.DataContainer1{
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding-left: 10%;
+}
+
+.DataContainer2{
+  width: 20%;
+  float: left;
+  padding-left: 15%;
+}
+
+.DataContainer2 p,
+.DataContainer3 p,
+.DataContainer4 p{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.MaleG,
+.FemaleG,
+.SingleD,
+.CoupleD{
+  font-size: 13px;
+}
+
+.DataContainer3{
+  margin-left: 15%;
+  width: 20%;
+  float: left;
+}
+
+.DataContainer4{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+  margin-inline: 30%;
+  padding-top: 8%;
+}
+
+.DataContainer4 input{
+  width: 98%;
+  height: 42px;
+  outline: none;
+  border: none;
+}
+
+#DateBtn{
+  height: 45px;
+  width: 99%;
+}
+
+.FNDiv,
+.LNDiv,
+.PHDiv{
+  float: right;
+  width: 99%;
+  text-align: left;
+  float: left;
+}
+
+.FNLLabel{
+  margin-right: 10%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.LNLLabel{
+  margin-right: 10.5%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.PHLLabel{
+  margin-right: 1.85%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.DataContainer5{
+  width: 50%;
+  height: 70px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+}
+
+.SubmitButton{
+  width: 50%;
+  height: 67%;
+  font-size: 25px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  cursor: pointer;
+  transition:all .5s linear;
+}
+
+
+.SubmitButton:hover{
+  width: 60%;
+  margin-left: 20%;
+  background-color: white;
+  font-size: 27px;
+  border-radius: 5px;
+}
+
+.BookSection{
+  width: 100%;
+  /* margin-inline:14%; */
+  height: 45px;
+  font-size: 17px;
+  text-align: center;
+  color: gray;
+  background-color: white;
+  font-weight: bold;
+  outline: none;
+  border-radius: 5px;
+}
+
+.BookSection > option{
+font-size: 18px;
+}
+
+.FDateSection{
+  width: 215px;
+  height: 35px;
+  color: gray;
+  margin-top: 5%;
+  position: relative;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.BIODiv{
+  width: 70%;
+  height: 40%;
+  font-size: 25px;
+  border-radius: 8px;
+  position: fixed;
+  top: 25%;
+  left: 15%;
+  background-color: gray;
+  text-align: left;
+  word-wrap: break-word;
+  padding: 2%;
+  visibility: hidden;
+  transition: visibility .5s,opacity 1s linear;
+  transition: all .5s linear;
+  opacity: 0;
+}
+
+#AboutID:hover .BIODiv {
+  background-color: #d3d3d3bf;
+  visibility: visible;
+  opacity: 1;
+  top: 30%;
+}
+
+.BIODiv h1{
+  text-align: center;
+  margin-top: 0;
+}
+
+.showPoto{
+  position: fixed;
+  text-align: center;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  height: 80%;
+  border-radius: 8px;
+  background:none;
+  z-index: 2;
+  /* visibility: hidden; */
+  transition: visibility .5s,opacity .5s linear;
+  transition: all .5s linear;
+  opacity: 0;
+}
+
+/* .showPotoC{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  opacity: .7;
+  visibility: hidden;
+} */
+
+#PhotoTemp{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+.rightAngel{
+  position: fixed;
+  right: 15%;
+  top: 50%;
+  color: gray;
+  font-size: 30px;
+  cursor: pointer;
+  width: 4%;
+  text-align: center;
+  padding: 3px;
+  transition: all, .5s linear;
+  visibility: hidden;
+}
+
+.leftAngel{
+  position: fixed;
+  left: 15%;
+  top: 50%;
+  color: gray;
+  font-size: 30px;
+  cursor: pointer;
+  width: 4%;
+  text-align: center;
+  padding: 3px;
+  transition: all, .5s linear;
+  visibility: hidden;
+}
+
+.rightAngel:hover{
+    font-size: 40px;
+    right: 14%;
+    top: 49%;
+}
+.leftAngel:hover {
+  font-size: 40px;
+  left:14%;
+  top: 49;
+}
+
+
+.navWord{
+  float: left;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.mnavLi{
+  float: right;
+  list-style: none;
+  text-decoration: none;
+  display: inline;
+  padding-inline:1%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.mnavLi ul{
+position: absolute;
+}
+
+.mnavLi a{
+text-decoration: none;
+display: inline;
+color: black;
+}
+
+.snavul{
+  background-color: gray;
+  border-radius: 5px;
+  padding: 0;
+  width: 11%;
+  position: absolute;
+  top:90%;
+  visibility: hidden;
+  transition: visibility .7s,opacity .7s linear;
+  transition: all .5s linear;
+  opacity: 0;
+}
+
+
+#ConId:hover .snavul{
+  visibility: visible;
+  opacity: 1;
+  top:100%;
+}
+
+#BookNow{
+  position: absolute;
+}
+.snavul:before{
+content: "";
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid gray;
+height: 0px;
+width: 0px;
+position: absolute;
+left: 25px;
+top: -6px;
+}
+
+.ssnavul{
+  background-color: gray;
+  width: 90%;
+  position: absolute;
+  top: 75%;
+  left: 95%;
+  border-radius: 5px;
+  padding: 0;
+  text-align: left;
+  visibility: hidden;
+  transition: visibility .5s,opacity .5s linear;
+  transition: all .5s linear;
+  opacity: 0;
+}
+
+#socialId:hover .ssnavul{
+visibility: visible;
+opacity: 1;
+left: 105%;
+}
+
+.ssnavul:before{
+content: "";
+border-left: 6px solid transparent;
+border-right: 6px solid gray;
+border-bottom: 6px solid transparent;
+border-top: 6px solid transparent;
+height: 0px;
+width: 0px;
+position: absolute;
+left: -12px;
+top: 5px;
+}
+
+#socialId{
+  padding-bottom: 6%;
+}
+
+.snavLi:hover {
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* border-bottom: 2px solid black; */
+}
+
+#PhoneId:hover{
+  background-color: white;
+  /* border-bottom: 2px solid black; */
+  border-top-left-radius: 4.5px;
+  border-top-right-radius: 4.5px;
+}
+
+#socialId:hover{
+background-color: white;
+/* border-bottom: 2px solid black; */
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.snavLi{
+  list-style: none;
+  float: inherit;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-inline:7%;
+}
+
+#faceId:hover{
+  background-color: white;
+  /* border-bottom: 2px solid black; */
+  border-top-left-radius: 4.5px;
+  border-top-right-radius: 4.5px;
+}
+
+#BookNow:hover{
+  color: #95a5a6;
+  border-bottom: 2px solid #95a5a6;
+}
+#AboutID:hover{
+  color: black;
+  border-bottom: 2px solid #95a5a6;
+}
+#ConId:hover {
+  color: #95a5a6;
+  border-bottom: 2px solid #95a5a6;
+}
+
+.wideImg img{
+  /* margin-top: 6%; */
+  width: 100%;
+}
+
+.PortofolioFlexBoxs{
+  width: 82%;
+  margin-top: 5%;
+  margin-inline: 8%;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 1%;
+  grid-row-gap: 2%;
+
+}
+
+.parent div{
+  text-align: center;
+  background-color: white;
+}
+
+.div1l { grid-area: 1 / 1 ;
+  /* / 0 / 0 */
+  background-color: white;
+  contain:size;
+  transition:all 1s linear;
+}
+
+.div1l img{
+  max-width: 100%;
+  max-height: 100%;
+  /* width: 100%;
+  height: 100%; */
+}
+
+.div1l:hover img {
+    opacity: .3;
+
+}
+
+.div1l:hover .zoomIcon{
+  display: block;
+}
+
+.backIcon{
+  color: gray;
+}
+
+#backIconI{
+  width: 23px;
+  padding: 5px;
+  position: absolute;
+  left: 3%;
+  top: 19px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+
+
+
+.div2 { grid-area: 1 / 2 / 3;
+  /* / 2 / 4 */
+background-color: white;
+
+}
+
+.div2 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div2:hover img{
+    opacity: .3;
+  }
+
+
+.div2:hover .zoomIcon{
+  display: inline;
+}
+
+.div3 { grid-area: 1 / 3 / 3;
+  /* / 3 / 3 */
+background-color: white;
+
+}
+
+.div3 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.div3:hover img{
+  opacity: .3;
+}
+
+.div3:hover .zoomIcon{
+  display: inline;
+}
+
+.div4l { grid-area: 1 / 4 ;
+  /* / 3 / 3 */
+  background-color: white;
+
+}
+
+.div4l img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div4l:hover img{
+  opacity: .3;
+}
+
+.div4l:hover .zoomIcon{
+  display: inline;
+}
+
+
+.div5l { grid-area: 2 / 1 ;
+  /* / 4 / 3 */
+  background-color: white;
+
+}
+
+.div5l img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div5l:hover img{
+  opacity: .3;
+}
+
+.div5l:hover .zoomIcon{
+  display: inline;
+}
+
+.div6 { grid-area: 2 / 2 ;
+  /* / 3 / 3 */
+  background-color: white;
+
+}
+.div7 { grid-area: 2 / 3 ;
+  /* / 1 / 2 */
+background-color: red;
+animation-name: change-color;
+animation-duration: 3s;
+}
+.div8l { grid-area: 2 / 4 ;
+  /* / 2 / 4 */
+background-color: white;
+}
+
+.div8l img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.div8l:hover img{
+  opacity: .3;
+}
+
+.div8l:hover .zoomIcon{
+  display: inline;
+}
+
+.div9 { grid-area: 3 / 1 ;
+  /* / 3 / 3 */
+background-color: white;
+}
+
+.div9 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.div9:hover img{
+  opacity: .3;
+}
+
+.div9:hover .zoomIcon{
+  display: inline;
+}
+
+
+.div10 { grid-area: 3 / 2 / 5 / 4;
+  /* / 3 / 3 */
+  background-color: white;
+}
+
+.div10 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.div10:hover img{
+  opacity: .3;
+}
+
+.div10:hover .zoomIcon{
+  display: inline;
+}
+
+.div11 { grid-area: 3 / 3 ;
+  /* / 4 / 3 */
+  background-color: white;
+}
+.div12l { grid-area: 3 / 4 ;
+  /* / 3 / 3 */
+  background-color: white;
+  text-align: center;
+      contain: size;
+}
+
+.div12l img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div12l:hover img{
+  opacity: .3;
+}
+
+.div12l:hover .zoomIcon{
+  display: inline;
+}
+
+.div13 { grid-area: 4 / 1 ;
+  /* / 0 / 0 */
+contain:size;
+text-align: center;
+}
+.div13 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div13:hover img{
+  opacity: .3;
+}
+
+.div13:hover .zoomIcon{
+  display: inline;
+}
+
+.div14 { grid-area: 4 / 2 ;
+  /* / 2 / 4 */
+background-color: blue;
+}
+.div15 { grid-area: 4 / 3 ;
+  /* / 3 / 3 */
+background-color: white;
+}
+.div16 { grid-area: 4 / 4 ;
+  /* / 3 / 3 */
+  background-color: white;
+  text-align: center;
+  contain:size;
+}
+
+.div16 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div16:hover img{
+  opacity: .3;
+}
+
+.div16:hover .zoomIcon{
+  display: inline;
+}
+
+
+.div17 { grid-area: 5 / 1 ;
+  /* / 4 / 3 */
+  background-color: white;
+   text-align: center;
+   contain:size;
+}
+
+.div17 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div17:hover img{
+  opacity: .3;
+}
+
+.div17:hover .zoomIcon{
+  display: inline;
+}
+
+.div18 { grid-area: 5 / 2 / 7;
+  /* / 3 / 3 */
+  text-align: center;
+  contain:size;
+}
+
+.div18 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div18:hover img{
+  opacity: .3;
+}
+
+.div18:hover .zoomIcon{
+  display: inline;
+}
+
+.div19 { grid-area: 5 / 3 / 7;
+  /* / 1 / 2 */
+background-color: red;
+text-align: center;
+contain:size;
+}
+
+.div19 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div19:hover img{
+  opacity: .3;
+}
+
+.div19:hover .zoomIcon{
+  display: inline;
+}
+
+.div20 { grid-area: 5 / 4 ;
+  /* / 2 / 4 */
+text-align: center;
+contain:size;
+}
+
+.div20 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div20:hover img{
+  opacity: .3;
+}
+
+.div20:hover .zoomIcon{
+  display: inline;
+}
+
+.div21 { grid-area: 6 / 1 ;
+  /* / 3 / 3 */
+text-align: center;
+contain:size;
+}
+
+.div21 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div21:hover img{
+  opacity: .3;
+}
+
+.div21:hover .zoomIcon{
+  display: inline;
+}
+
+.div22 { grid-area: 6 / 2 ;
+  /* / 3 / 3 */
+  text-align: center;
+  contain:size;
+}
+
+.div22 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div22:hover img{
+  opacity: .3;
+}
+
+.div22:hover .zoomIcon{
+  display: inline;
+}
+
+.div23 { grid-area: 6 / 3 ;
+  /* / 4 / 3 */
+  background-color: white;
+}
+.div24 { grid-area: 6 / 4 ;
+  /* / 3 / 3 */
+text-align: center;
+contain:size;
+}
+
+.div24 img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.div24:hover img{
+  opacity: .3;
+}
+
+.div24:hover .zoomIcon{
+  display: inline;
+}
+
+
+.moreAlbum{
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 3.5%;
+  text-align: center;
+
+}
+
+.albumP{
+text-align: center;
+font-size: 30px;
+font-weight: bold;
+}
+
+.parent2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-inline:10%;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 1%;
+  grid-row-gap: 2%; */
+
+}
+
+.parent2 div{
+  background-color: white;
+  height: 350px;
+  width: calc(100% / 3);
+}
+
+.parent2 div img{
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  /* contain:size; */
+}
+
+.zoomIcon{
+  position: relative;
+  top: -40%;
+  display: none;
+}
+
+.footer{
+  background-color: black;
+  background-color: black;
+  height: 30px;
+  padding: 1%;
+}
+
+.footer a{
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.whatsappIcon{
+  position: fixed;
+  font-size: 43px;
+  color: #25D366;
+  top: 85%;
+  left: 2%;
+}
