@@ -64,7 +64,7 @@ ul,li,a{
   width: 50%;
   left: 25%;
   top: 6%;
-  height: 25%;
+  height: fit-content;
   background-color: #e91e63;
  /* background-color: gray; */
   border-radius: 10px;
