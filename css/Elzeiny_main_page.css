@@ -32,7 +32,12 @@ ul,li,a{
 }
 
 #AboutID{
-  margin-right: 12%;
+  margin-right: 70px;
+}
+
+.AboutBio{
+  cursor: pointer;
+  margin: 0;
 }
 
 @keyframes zoom {
@@ -64,16 +69,15 @@ ul,li,a{
   width: 50%;
   left: 25%;
   top: 6%;
-  height: fit-content;
+  height: 25%;
   background-color: #e91e63;
- /* background-color: gray; */
+  /* background-color: gray; */
   border-radius: 10px;
   z-index: 2;
   visibility: hidden;
   transition: visibility .5s,opacity .5s linear;
   transition: all .5s linear;
   opacity: 0;
-  z-index: 50000;
 }
 
 .BookingFormDiv{
@@ -240,7 +244,7 @@ font-size: 18px;
   opacity: 0;
 }
 
-#AboutID:hover .BIODiv {
+.mnavLi:hover .BIODiv {
   background-color: #d3d3d3bf;
   visibility: visible;
   opacity: 1;
@@ -268,7 +272,7 @@ font-size: 18px;
   opacity: 0;
 }
 
-/* .showPotoC{
+.showPotoC{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -276,7 +280,7 @@ font-size: 18px;
   z-index: 1;
   opacity: .7;
   visibility: hidden;
-} */
+}
 
 #PhotoTemp{
   max-width: 100%;
@@ -373,7 +377,16 @@ color: black;
 }
 
 #BookNow{
-  position: absolute;
+width: fit-content;
+position: absolute;
+margin: 0;
+cursor: pointer;
+font-weight: bold;
+font-size: 20px;
+}
+
+#BookNow p{
+  margin: 0;
 }
 .snavul:before{
 content: "";
@@ -469,6 +482,12 @@ border-bottom-right-radius: 5px;
   color: black;
   border-bottom: 2px solid #95a5a6;
 }
+
+#ConId{
+  margin: 0;
+  cursor: pointer;
+}
+
 #ConId:hover {
   color: #95a5a6;
   border-bottom: 2px solid #95a5a6;
@@ -954,15 +973,52 @@ font-weight: bold;
 }
 
 .footer{
-  background-color: black;
-  background-color: black;
-  height: 30px;
+  background-color: #000000cc;
+  color: white;
+  height: fit-content;
   padding: 1%;
 }
 
-.footer a{
-  text-decoration: none;
-  font-size: 25px;
+.FooterCon{
+  padding-bottom: 2%;
+  flex-flow: row;
+  display: flex;
+}
+
+.FooterCon div{
+  padding-top: 3%;
+  width: calc(100%/3);
+  text-align: center;
+
+}
+
+.Footer3 span{
+  font-size: 30px;
+}
+
+.DeveloperDiv{
+  width: 99%;
+  display: flex;
+}
+
+.DeveloperDiv span{
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+.DeveloperDiv img{
+  vertical-align: middle;
+  width: 10%;
+  border-radius: 12px;
+}
+
+.DeveloperDiv a{
+  margin-left: 5%;
+  display: inline;
+  width: 50%;
+  top: 0%;
+  color: aliceblue;
 }
 
 .whatsappIcon{
